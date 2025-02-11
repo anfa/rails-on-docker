@@ -20,7 +20,7 @@ services:
       - HISTFILE=/usr/src/app/.dockerdev/.bash_history
       - MALLOC_ARENA_MAX=2
     volumes:
-      - .:/usr/src/app/:cached
+      # - .:/usr/src/app/:cached
       - bundle:/usr/local/bundle
       - rails_cache:/usr/src/app/tmp/cache
       - node_modules:/usr/src/app/node_modules
@@ -32,7 +32,7 @@ services:
     image: rails-on-docker:1.5.0
     command: yarn build --watch
     volumes:
-      - .:/usr/src/app:cached
+      # - .:/usr/src/app:cached
       - bundle:/usr/local/bundle
       - node_modules:/usr/src/app/node_modules
 
